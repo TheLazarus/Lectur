@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,800;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+body {
+  background-image: url("background.jpg");
+  background-size: cover;
+}
+.lectur-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lectur-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+.lectur-header > h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 100px;
+  animation-name: colorChange;
+  animation-timing-function: ease-in-out;
+  animation-duration: 10s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+}
+
+.lectur-header > h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  color: black;
+}
+.points {
+  margin-top: 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  border-radius: 5px;
+}
+.points p {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 6px;
+}
+.stream {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stream button {
+  background: black;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  letter-spacing: 5px;
+  color: #ffac41;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+.stream button:hover {
+  color: red;
+}
+.stream ul {
+  background-color: white;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.stream li {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  padding:20px;
+}
+.stream.groups {
+  display: none;
+}
+.stream li:hover {
+  background-color: black;
+  color: #ffac41;
+}
+#currentStream {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  padding: 5px;
+}
+#lectureName {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  color: black;
+  font-size: 15px;
+}
+.options {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  opacity: 1;
+}
+.options button {
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+  color: #ffac41;
+  padding: 10px 20px;
+  letter-spacing: 3px;
+  border: none;
+  margin: 5px;
+  border-radius: 20px;
+  opacity: 0;
+}
+
+.options button:hover {
+  color: red;
+}
+#lecture-details {
+  opacity: 0;
+  margin-top: 60px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+.lecture {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 30px;
+  background-color: black;
+}
+.lecture h1 {
+  color: #ffac41;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+}
+.lecture h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  color: #ffac41;
+  padding: 20px;
+}
+@keyframes colorChange {
+  0% {
+    color: black;
+  }
+  15% {
+    color: #6f4a8e;
+    letter-spacing: 4px;
+  }
+  30% {
+    color: #e11d74;
+    letter-spacing: 8px;
+  }
+  45% {
+    color: #3c2946;
+    letter-spacing: 40px;
+  }
+  60% {
+    color: #56556e;
+    letter-spacing: 0px;
+  }
+  75% {
+    color: #ff847c;
+  }
+  100% {
+    color: black;
+  }
+}
+
+@media (max-width: 1150px) {
+  body {
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+  .lectur-header > h1 {
+    font-size: 65px;
+  }
+
+  .lectur-header > h3 {
+    font-size: 20px;
+  }
+  .points {
+    padding: 30px;
+    margin-top: 10px;
+    line-height: 40px;
+  }
+  .points p {
+    font-size: 15px;
+  }
+  .stream button {
+    font-size: 12px;
+    cursor: pointer;
+  }
+  #currentStream {
+    font-size: 17px;
+  }
+}
+@media (max-width: 710px) {
+  #lecture-details {
+    flex-direction: column;
+  }
+  .lectur-header > h1 {
+    font-size: 55px;
+  }
+
+  .lectur-header > h3 {
+    font-size: 15px;
+  }
+  .points {
+    padding: 30px;
+    margin-top: 10px;
+    line-height: 30px;
+  }
+  .points p {
+    font-size: 10px;
+  }
+  .stream button {
+    font-size: 10px;
+    cursor: pointer;
+  }
+  #currentStream {
+    font-size: 15px;
+  }
+}
+@media (max-width: 430px) {
+  .stream li {
+    font-size: 12px;
+  }
+  @keyframes colorChange {
+    0% {
+      color: black;
+    }
+    15% {
+      color: #6f4a8e;
+      letter-spacing: 4px;
+    }
+    30% {
+      color: #e11d74;
+      letter-spacing: 5px;
+    }
+    45% {
+      color: #3c2946;
+      letter-spacing: 20px;
+    }
+    60% {
+      color: #56556e;
+      letter-spacing: 0px;
+    }
+    75% {
+      color: #ff847c;
+    }
+    100% {
+      color: black;
+    }
+  }
+  #lectureName {
+    font-size: 12px;
+  }
+  #currentStream {
+    font-size: 13px;
+  }
+  .lectur-header h3 {
+    font-size: 13px;
+  }
+}
+@media (max-width: 400px) {
+  #lectureName {
+    font-size: 10px;
+  }
+}
+@media (max-width: 360px) {
+  .stream li {
+    font-size: 10px;
+  }
+  #lectureName {
+    font-size: 9px;
+  }
+}
